@@ -19,3 +19,4 @@ mqtt_bridge_node:
       bridge5: ["mqtt_bridge.bridge:RosToMqttBridge","std_msgs.msg:String","/private/echo","~/echo"]
       bridge6: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","~/echo", "/private/back"]
       bridge7: ["mqtt_bridge.bridge:MqttToRosBridge","vda5050_msgs.msg:Order","Neobotix/LTC/MMO_500/order", "/VDA5050_Test"]
+      #TODO: add RosToMqtt for communication in other dircetion
