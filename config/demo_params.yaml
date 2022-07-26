@@ -18,3 +18,4 @@ mqtt_bridge_node:
       bridge4: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","echo","/back"]
       bridge5: ["mqtt_bridge.bridge:RosToMqttBridge","std_msgs.msg:String","/private/echo","~/echo"]
       bridge6: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","~/echo", "/private/back"]
+      bridge7: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","Neobotix/LTC/MMO_500/order", "/VDA5050_Test"]
