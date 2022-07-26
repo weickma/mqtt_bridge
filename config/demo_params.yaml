@@ -10,7 +10,7 @@ mqtt_bridge_node:
       private_path: "device/001"
     serializer: json:dumps
     deserializer: json:loads
-    n_bridges: 6
+    n_bridges: 7
     bridge:
       bridge1: ["mqtt_bridge.bridge:RosToMqttBridge","std_msgs.msg:Bool","/ping","ping"]
       bridge2: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:Bool","ping","/pong"]
@@ -18,4 +18,4 @@ mqtt_bridge_node:
       bridge4: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","echo","/back"]
       bridge5: ["mqtt_bridge.bridge:RosToMqttBridge","std_msgs.msg:String","/private/echo","~/echo"]
       bridge6: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","~/echo", "/private/back"]
-      bridge7: ["mqtt_bridge.bridge:MqttToRosBridge","std_msgs.msg:String","Neobotix/LTC/MMO_500/order", "/VDA5050_Test"]
+      bridge7: ["mqtt_bridge.bridge:MqttToRosBridge","vda5050_msgs.msg:Order","Neobotix/LTC/MMO_500/order", "/VDA5050_Test"]
